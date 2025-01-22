@@ -8,3 +8,16 @@ $w.onReady(function () {
 
     // Click 'Preview' to run your code
 });
+$w.onReady(function () {
+    // Set the page name dynamically
+    $w('#pageName').text = "Bears Statistics";
+
+    // Call the master page script
+    loadScript('path/to/masterPage.js');
+});
+
+function loadScript(url) {
+    const script = document.createElement('script');
+    script.src = url;
+    document.head.appendChild(script);
+}
